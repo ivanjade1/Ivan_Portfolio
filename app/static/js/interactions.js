@@ -87,7 +87,7 @@ function initializeProjectFilters() {
             });
             
             // Filter project cards
-            projectCards.forEach((card, index) => {
+            projectCards.forEach((card) => {
                 const shouldShow = filter === 'all' || card.classList.contains(filter);
                 
                 if (shouldShow) {
@@ -95,7 +95,7 @@ function initializeProjectFilters() {
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'scale(1)';
-                    }, index * 50);
+                    }, 10);
                 } else {
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.8)';

@@ -23,7 +23,7 @@ def index():
         Rendered HTML template
     """
     portfolio_data = {
-        'name': 'Your Name',
+        'name': 'Ivan Jade',
         'title': 'Full Stack Developer',
         'bio': 'Passionate developer creating amazing web experiences',
         'current_year': datetime.now().year
