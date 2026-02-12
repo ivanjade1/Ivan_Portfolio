@@ -3,7 +3,11 @@ Portfolio Website - Main Entry Point
 Run this file to start the Flask development server
 """
 import os
+from dotenv import load_dotenv
 from app import create_app
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Create Flask application instance
 app = create_app()

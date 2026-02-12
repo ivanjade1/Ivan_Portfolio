@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+
+{% block title %}Terms of Service - {{ data.name }}{% endblock %}
+{% block meta_description %}Terms of Service for {{ data.name }}'s portfolio website{% endblock %}
+
+{% block content %}
+<!-- Terms of Service Page -->
+<section class="min-h-screen py-32 relative overflow-hidden">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <!-- Back Button -->
+        <div class="mb-8" data-aos="fade-right">
+            <a href="/" class="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors group">
+                <i class="bi bi-arrow-left group-hover:-translate-x-2 transition-transform"></i>
+                Back to Home
+            </a>
+        </div>
+        
+        <!-- Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Terms of <span class="bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">Service</span>
+            </h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4"></div>
+            <p class="text-gray-400">Last updated: February 12, 2026</p>
+        </div>
+        
+        <!-- Content -->
+        <div class="space-y-8 text-gray-300" data-aos="fade-up">
+            <!-- Introduction -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20">
+                <p class="leading-relaxed">
+                    Please read these Terms of Service ("Terms", "Terms of Service") carefully before using this portfolio 
+                    website (the "Service") operated by {{ data.name }} ("us", "we", or "our").
+                </p>
+                <p class="leading-relaxed mt-4">
+                    Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. 
+                    By accessing or using the Service, you agree to be bound by these Terms.
+                </p>
+            </div>
+            
+            <!-- Section 1 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        1
+                    </span>
+                    Use of Service
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        This website is a personal portfolio showcasing professional work, skills, and contact information. 
+                        You may use this Service for lawful purposes only. You agree not to use the Service:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-4">
+                        <li>In any way that violates any applicable national or international law or regulation</li>
+                        <li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent</li>
+                        <li>To impersonate or attempt to impersonate us, our employees, another user, or any other person or entity</li>
+                        <li>To engage in any conduct that restricts or inhibits anyone's use or enjoyment of the Service</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 2 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        2
+                    </span>
+                    Intellectual Property
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        The Service and its original content, features, and functionality are and will remain the exclusive property 
+                        of {{ data.name }}. The Service is protected by copyright, trademark, and other laws of both the United States 
+                        and foreign countries.
+                    </p>
+                    <p class="leading-relaxed">
+                        Our trademarks, logos, and service marks displayed on the Service are our property. You are not permitted to 
+                        use these without our prior written consent.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 3 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        3
+                    </span>
+                    Links to Other Websites
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        Our Service may contain links to third-party websites or services that are not owned or controlled by us. 
+                        We have no control over, and assume no responsibility for, the content, privacy policies, or practices of 
+                        any third-party websites or services.
+                    </p>
+                    <p class="leading-relaxed">
+                        You acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage 
+                        or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, 
+                        or services available on or through any such websites or services.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 4 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        4
+                    </span>
+                    Contact Form Usage
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        The contact form provided on this Service is for legitimate business inquiries and professional communication only. 
+                        By submitting the contact form, you agree that:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-4">
+                        <li>The information you provide is accurate and truthful</li>
+                        <li>You will not use the contact form for spam, harassment, or any illegal purposes</li>
+                        <li>We may use your contact information to respond to your inquiry</li>
+                        <li>We reserve the right to block or report abusive submissions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 5 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        5
+                    </span>
+                    Disclaimer of Warranties
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        The Service is provided on an "AS IS" and "AS AVAILABLE" basis. The Service is provided without warranties 
+                        of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, 
+                        fitness for a particular purpose, non-infringement, or course of performance.
+                    </p>
+                    <p class="leading-relaxed">
+                        We do not warrant that the Service will function uninterrupted, secure, or available at any particular time 
+                        or location. We do not warrant that any errors or defects will be corrected.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 6 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        6
+                    </span>
+                    Limitation of Liability
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        In no event shall {{ data.name }}, nor its directors, employees, partners, agents, suppliers, or affiliates, 
+                        be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, 
+                        loss of profits, data, use, goodwill, or other intangible losses, resulting from:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 ml-4">
+                        <li>Your access to or use of or inability to access or use the Service</li>
+                        <li>Any conduct or content of any third party on the Service</li>
+                        <li>Any content obtained from the Service</li>
+                        <li>Unauthorized access, use, or alteration of your transmissions or content</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 7 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        7
+                    </span>
+                    Governing Law
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which the 
+                        service operator resides, without regard to its conflict of law provisions.
+                    </p>
+                    <p class="leading-relaxed">
+                        Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. 
+                        If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions 
+                        of these Terms will remain in effect.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Section 8 -->
+            <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <span class="w-10 h-10 rounded-lg bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-lg">
+                        8
+                    </span>
+                    Changes to Terms
+                </h2>
+                <div class="space-y-4 ml-13">
+                    <p class="leading-relaxed">
+                        We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is 
+                        material, we will try to provide at least 30 days' notice prior to any new terms taking effect.
+                    </p>
+                    <p class="leading-relaxed">
+                        By continuing to access or use our Service after those revisions become effective, you agree to be bound by 
+                        the revised terms. If you do not agree to the new terms, please stop using the Service.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="bg-gradient-to-r from-primary-500/10 to-accent-500/10 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/30">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <i class="bi bi-envelope text-primary-400 text-3xl"></i>
+                    Contact Us
+                </h2>
+                <p class="leading-relaxed mb-4">
+                    If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <a href="mailto:prejolesivanjade@gmail.com" class="text-primary-400 hover:text-primary-300 transition-colors font-semibold">
+                    prejolesivanjade@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

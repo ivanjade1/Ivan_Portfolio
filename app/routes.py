@@ -2,9 +2,11 @@
 Application Routes
 Defines all URL routes and API endpoints for the portfolio website
 """
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify, current_app
+from flask_mail import Message
 from datetime import datetime
 import json
+from app import mail
 
 
 # Main routes blueprint
@@ -49,6 +51,30 @@ def contact():
     return render_template('index.html', section='contact')
 
 
+@main_bp.route('/privacy')
+def privacy():
+    """Render privacy policy page"""
+    portfolio_data = {
+        'name': 'Ivan Jade',
+        'title': 'Full Stack Developer',
+        'bio': 'Passionate developer creating amazing web experiences',
+        'current_year': datetime.now().year
+    }
+    return render_template('privacy.html', data=portfolio_data)
+
+
+@main_bp.route('/terms')
+def terms():
+    """Render terms of service page"""
+    portfolio_data = {
+        'name': 'Ivan Jade',
+        'title': 'Full Stack Developer',
+        'bio': 'Passionate developer creating amazing web experiences',
+        'current_year': datetime.now().year
+    }
+    return render_template('terms.html', data=portfolio_data)
+
+
 @api_bp.route('/contact', methods=['POST'])
 def submit_contact():
     """
@@ -85,14 +111,67 @@ def submit_contact():
                 'error': 'Invalid email address'
             }), 400
         
-        # Here you would typically:
-        # - Store in database
-        # - Send email notification
-        # - Integrate with email service (SendGrid, etc.)
-        
-        # For now, just log the submission
-        print(f"Contact form submission from {data.get('name')} ({data.get('email')})")
-        print(f"Message: {data.get('message')}")
+        # Send email notification
+        try:
+            # Create email message
+            subject = data.get('subject', 'New Contact Form Submission')
+            msg = Message(
+                subject=f"Portfolio Contact: {subject}",
+                recipients=[current_app.config['MAIL_USERNAME']],  # Send to yourself
+                reply_to=email
+            )
+            
+            # Email body
+            msg.body = f"""
+New contact form submission from your portfolio website:
+
+Name: {data.get('name')}
+Email: {email}
+Subject: {subject}
+
+Message:
+{data.get('message')}
+
+---
+Sent from Portfolio Contact Form
+            """
+            
+            msg.html = f"""
+            <html>
+                <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+                    <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
+                        <h2 style="color: #0ea5e9; border-bottom: 2px solid #ec4899; padding-bottom: 10px;">
+                            New Portfolio Contact Form Submission
+                        </h2>
+                        <div style="background-color: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                            <p><strong>Name:</strong> {data.get('name')}</p>
+                            <p><strong>Email:</strong> <a href="mailto:{email}">{email}</a></p>
+                            <p><strong>Subject:</strong> {subject}</p>
+                            <hr style="border: 1px solid #eee; margin: 20px 0;">
+                            <p><strong>Message:</strong></p>
+                            <p style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #0ea5e9;">
+                                {data.get('message').replace(chr(10), '<br>')}
+                            </p>
+                        </div>
+                        <p style="text-align: center; color: #666; margin-top: 20px; font-size: 12px;">
+                            Sent from Portfolio Contact Form
+                        </p>
+                    </div>
+                </body>
+            </html>
+            """
+            
+            # Send email
+            mail.send(msg)
+            
+            print(f"✅ Email sent successfully from {data.get('name')} ({email})")
+            
+        except Exception as e:
+            print(f"❌ Error sending email: {str(e)}")
+            return jsonify({
+                'success': False,
+                'error': 'Failed to send email. Please try again later or contact directly via email.'
+            }), 500
         
         return jsonify({
             'success': True,
