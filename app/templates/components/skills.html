@@ -1,0 +1,199 @@
+<!-- Skills Section Component -->
+<section id="skills" class="py-20 relative overflow-hidden bg-slate-900/50">
+    <div class="container mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                My <span class="bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">Skills</span>
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+                These are the technologies and tools I use to bring ideas to life.
+            </p>
+        </div>
+        
+        <!-- Skills Categories -->
+        <div class="mb-8 flex justify-center gap-4 flex-wrap" data-aos="fade-up">
+            <button class="skill-filter-btn active px-6 py-2 rounded-full bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300" data-filter="all">
+                All Skills
+            </button>
+            <button class="skill-filter-btn px-6 py-2 rounded-full bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300" data-filter="frontend">
+                Frontend
+            </button>
+            <button class="skill-filter-btn px-6 py-2 rounded-full bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300" data-filter="backend">
+                Backend
+            </button>
+            <button class="skill-filter-btn px-6 py-2 rounded-full bg-slate-800 hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300" data-filter="tools">
+                Tools
+            </button>
+        </div>
+        
+        <!-- Skills Grid -->
+        <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Frontend Skills -->
+            <div class="skill-card frontend" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-palette text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">HTML/CSS</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="90"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card frontend" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-filetype-js text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">JavaScript</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card frontend" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-bootstrap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">React</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="80"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Backend Skills -->
+            <div class="skill-card backend" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-python text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Python</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="90"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card backend" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-server text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Flask</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card backend" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-database text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">REST APIs</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools -->
+            <div class="skill-card tools" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-git text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Git</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card tools" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-box text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Docker</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">75%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="75"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skill-card tools" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-800/50 backdrop-blur-sm p-8 rounded-2xl border border-primary-500/20 hover:border-primary-500/50 transition-all duration-300 hover:scale-105">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="bi bi-cloud text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">AWS</h3>
+                    </div>
+                    <div class="mb-2 flex justify-between text-sm">
+                        <span class="text-gray-400">Proficiency</span>
+                        <span class="text-primary-400 font-semibold">70%</span>
+                    </div>
+                    <div class="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
+                        <div class="skill-progress h-full bg-gradient-to-r from-primary-500 to-accent-500 rounded-full" style="width: 0%" data-width="70"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

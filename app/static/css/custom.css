@@ -1,0 +1,226 @@
+/**
+ * Custom CSS
+ * Additional styles and animations not covered by Tailwind
+ */
+
+/* ============================================
+   Custom Animations
+   ============================================ */
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 1000px 100%;
+}
+
+/* ============================================
+   Custom Scrollbar
+   ============================================ */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        to bottom,
+        #0ea5e9,
+        #ec4899
+    );
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+        to bottom,
+        #0284c7,
+        #db2777
+    );
+}
+
+/* ============================================
+   Smooth Transitions
+   ============================================ */
+
+* {
+    transition-property: color, background-color, border-color, transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   Glass Morphism Effect
+   ============================================ */
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   Gradient Text Animation
+   ============================================ */
+
+.gradient-text-animated {
+    background: linear-gradient(
+        90deg,
+        #0ea5e9,
+        #ec4899,
+        #8b5cf6,
+        #0ea5e9
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 5s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* ============================================
+   Card Hover Effects
+   ============================================ */
+
+.card-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 0.5s;
+}
+
+.card-hover:hover::before {
+    left: 100%;
+}
+
+/* ============================================
+   Pulse Animation
+   ============================================ */
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(236, 72, 153, 0.8);
+    }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Text Selection
+   ============================================ */
+
+::selection {
+    background-color: rgba(14, 165, 233, 0.3);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background-color: rgba(14, 165, 233, 0.3);
+    color: #ffffff;
+}
+
+/* ============================================
+   Loading Spinner
+   ============================================ */
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* ============================================
+   Responsive Utilities
+   ============================================ */
+
+.container-custom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ============================================
+   Focus States
+   ============================================ */
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   Skill Card Transitions
+   ============================================ */
+
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:not([style*="display: none"]) {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ============================================
+   Project Card Transitions
+   ============================================ */
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:not([style*="display: none"]) {
+    opacity: 1;
+    transform: scale(1);
+}

@@ -1,0 +1,66 @@
+<!-- Footer Component -->
+<footer class="relative bg-slate-900 border-t border-primary-500/20 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- About Column -->
+            <div class="md:col-span-2">
+                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent mb-4">
+                    Portfolio
+                </h3>
+                <p class="text-gray-400 mb-4 max-w-md">
+                    Passionate developer creating innovative web solutions that make a difference. 
+                    Always learning, always building.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#home" class="hover:text-primary-400 transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-primary-400 transition-colors">About</a></li>
+                    <li><a href="#skills" class="hover:text-primary-400 transition-colors">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-primary-400 transition-colors">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services -->
+            <div>
+                <h4 class="font-bold mb-4">Services</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="hover:text-primary-400 transition-colors">Web Development</li>
+                    <li class="hover:text-primary-400 transition-colors">Mobile Apps</li>
+                    <li class="hover:text-primary-400 transition-colors">UI/UX Design</li>
+                    <li class="hover:text-primary-400 transition-colors">Consulting</li>
+                    <li class="hover:text-primary-400 transition-colors">Maintenance</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bottom Bar -->
+        <div class="border-t border-primary-500/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-gray-400 text-sm">
+                &copy; {{ data.current_year }} <span class="text-primary-400 font-semibold">{{ data.name }}</span>. All rights reserved.
+            </p>
+            <div class="flex gap-6 text-sm text-gray-400">
+                <a href="#" class="hover:text-primary-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-primary-400 transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>

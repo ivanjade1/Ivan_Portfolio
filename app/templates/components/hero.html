@@ -1,0 +1,104 @@
+<!-- Hero Section Component -->
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <!-- Gradient Orbs Background -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 4s;"></div>
+    
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Left Content -->
+            <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+                <div class="inline-block mb-4">
+                    <span class="bg-gradient-to-r from-primary-400 to-accent-500 px-4 py-2 rounded-full text-sm font-semibold animate-pulse-slow">
+                        <i class="bi bi-star-fill mr-2"></i>Welcome to my portfolio
+                    </span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Hi, I'm 
+                    <span class="bg-gradient-to-r from-primary-400 via-accent-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
+                        {{ data.name }}
+                    </span>
+                </h1>
+                
+                <h2 class="text-2xl md:text-4xl text-gray-300 mb-6">
+                    <span id="typed-text"></span>
+                    <span class="animate-pulse">|</span>
+                </h2>
+                
+                <p class="text-lg text-gray-400 mb-8 max-w-2xl">
+                    {{ data.bio }}. I specialize in creating beautiful, functional, and user-friendly web applications that solve real-world problems.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="group bg-gradient-to-r from-primary-500 to-accent-500 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                        View My Work
+                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="border-2 border-primary-500 px-8 py-4 rounded-full font-semibold hover:bg-primary-500 transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                        <i class="bi bi-envelope mr-2"></i>
+                        Get In Touch
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex gap-4 mt-8 justify-center md:justify-start">
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                        <i class="bi bi-github text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                        <i class="bi bi-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                        <i class="bi bi-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                        <i class="bi bi-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Content - Animated Avatar -->
+            <div class="flex-1 flex justify-center" data-aos="fade-left">
+                <div class="relative">
+                    <!-- Rotating ring -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 blur-lg opacity-75 animate-spin-slow"></div>
+                    
+                    <!-- Avatar container -->
+                    <div class="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20"></div>
+                        <img src="https://via.placeholder.com/400" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 bg-gradient-to-r from-primary-500 to-accent-500 p-4 rounded-2xl shadow-xl animate-float">
+                        <i class="bi bi-code-slash text-3xl"></i>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-accent-500 to-purple-500 p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: 1s;">
+                        <i class="bi bi-lightbulb text-3xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
+                <span class="text-sm mb-2">Scroll Down</span>
+                <i class="bi bi-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    
+    .animate-spin-slow {
+        animation: spin-slow 20s linear infinite;
+    }
+</style>
