@@ -3,10 +3,9 @@ Application Routes
 Defines all URL routes and API endpoints for the portfolio website
 """
 from flask import Blueprint, render_template, request, jsonify, current_app
-from flask_mail import Message
 from datetime import datetime
 import json
-from app import mail
+import resend
 
 
 # Main routes blueprint
@@ -26,8 +25,8 @@ def index():
     """
     portfolio_data = {
         'name': 'Ivan Jade',
-        'title': 'Full Stack Developer',
-        'bio': 'Passionate developer creating amazing web experiences',
+        'title': 'UI/UX Designer',
+        'bio': 'Creative designer crafting intuitive digital experiences',
         'current_year': datetime.now().year
     }
     return render_template('index.html', data=portfolio_data)
@@ -56,8 +55,8 @@ def privacy():
     """Render privacy policy page"""
     portfolio_data = {
         'name': 'Ivan Jade',
-        'title': 'Full Stack Developer',
-        'bio': 'Passionate developer creating amazing web experiences',
+        'title': 'UI/UX Designer',
+        'bio': 'Creative designer crafting intuitive digital experiences',
         'current_year': datetime.now().year
     }
     return render_template('privacy.html', data=portfolio_data)
@@ -68,8 +67,8 @@ def terms():
     """Render terms of service page"""
     portfolio_data = {
         'name': 'Ivan Jade',
-        'title': 'Full Stack Developer',
-        'bio': 'Passionate developer creating amazing web experiences',
+        'title': 'UI/UX Designer',
+        'bio': 'Creative designer crafting intuitive digital experiences',
         'current_year': datetime.now().year
     }
     return render_template('terms.html', data=portfolio_data)
@@ -113,30 +112,11 @@ def submit_contact():
         
         # Send email notification
         try:
-            # Create email message
+            # Prepare email content
             subject = data.get('subject', 'New Contact Form Submission')
-            msg = Message(
-                subject=f"Portfolio Contact: {subject}",
-                recipients=[current_app.config['MAIL_USERNAME']],  # Send to yourself
-                reply_to=email
-            )
             
-            # Email body
-            msg.body = f"""
-New contact form submission from your portfolio website:
-
-Name: {data.get('name')}
-Email: {email}
-Subject: {subject}
-
-Message:
-{data.get('message')}
-
----
-Sent from Portfolio Contact Form
-            """
-            
-            msg.html = f"""
+            # HTML email body
+            html_content = f"""
             <html>
                 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                     <div style="max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
@@ -161,8 +141,16 @@ Sent from Portfolio Contact Form
             </html>
             """
             
-            # Send email
-            mail.send(msg)
+            # Send email via Resend
+            params = {
+                "from": current_app.config['RESEND_FROM_EMAIL'],
+                "to": [current_app.config['RESEND_TO_EMAIL']],
+                "subject": f"Portfolio Contact: {subject}",
+                "html": html_content,
+                "reply_to": email
+            }
+            
+            resend.Emails.send(params)
             
             print(f"✅ Email sent successfully from {data.get('name')} ({email})")
             

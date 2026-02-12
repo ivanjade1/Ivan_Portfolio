@@ -14,8 +14,8 @@ python-dotenv==1.0.0
 # Development Server
 Gunicorn==21.2.0
 
-# Email Support (Optional - for contact form)
-Flask-Mail==0.9.1
+# Email Support (Resend for contact form)
+resend==0.8.0
 
 # Form Validation (Optional)
 WTForms==3.1.1

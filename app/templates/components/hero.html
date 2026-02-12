@@ -1,82 +1,81 @@
 <!-- Hero Section Component -->
 <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-    <!-- Gradient Orbs Background -->
-    <div class="absolute top-20 left-10 w-72 h-72 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-    <div class="absolute top-40 right-10 w-72 h-72 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
-    <div class="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 4s;"></div>
+    <!-- Modern Geometric Background -->
+    <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-20 left-10 w-96 h-96 bg-primary-500 rounded-none rotate-45 blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-80 h-80 bg-accent-500 rounded-none -rotate-12 blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 w-72 h-72 bg-cyan-400 rounded-none rotate-12 blur-3xl"></div>
+    </div>
+    
+    <!-- Grid Pattern Overlay -->
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px); background-size: 50px 50px;"></div>
     
     <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between gap-12">
             <!-- Left Content -->
-            <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+            <div class="flex-1 text-center md:text-left" data-aos="fade-right" data-aos-duration="800">
                 <div class="inline-block mb-4">
-                    <span class="bg-gradient-to-r from-primary-400 to-accent-500 px-4 py-2 rounded-full text-sm font-semibold animate-pulse-slow">
-                        <i class="bi bi-star-fill mr-2"></i>Welcome to my portfolio
+                    <span class="bg-gradient-to-r from-primary-500 to-accent-500 px-6 py-2 font-bold text-sm tracking-wider uppercase border-l-4 border-accent-500">
+                        <i class="bi bi-award-fill mr-2"></i>Professional Designer
                     </span>
                 </div>
                 
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                     Hi, I'm 
-                    <span class="bg-gradient-to-r from-primary-400 via-accent-500 to-purple-500 bg-clip-text text-transparent animate-gradient-x">
+                    <span class="bg-gradient-to-r from-primary-400 via-cyan-400 to-accent-500 bg-clip-text text-transparent">
                         {{ data.name }}
                     </span>
                 </h1>
                 
-                <h2 class="text-2xl md:text-4xl text-gray-300 mb-6">
+                <h2 class="text-2xl md:text-4xl text-gray-300 mb-6 font-semibold">
                     <span id="typed-text"></span>
                     <span class="animate-pulse">|</span>
                 </h2>
                 
                 <p class="text-lg text-gray-400 mb-8 max-w-2xl">
-                    {{ data.bio }}. I specialize in creating beautiful, functional, and user-friendly web applications that solve real-world problems.
+                    {{ data.bio }}. I craft intuitive digital experiences that bridge the gap between users and technology, combining aesthetics with functionality to create designs that resonate.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#projects" class="group bg-gradient-to-r from-primary-500 to-accent-500 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                        View My Work
-                        <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    <a href="/#projects" class="group relative bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 font-bold overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-primary-500/50 border-l-4 border-accent-500">
+                        <span class="relative z-10 flex items-center justify-center">
+                            View My Work
+                            <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent-500 to-accent-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                     </a>
-                    <a href="#contact" class="border-2 border-primary-500 px-8 py-4 rounded-full font-semibold hover:bg-primary-500 transition-all duration-300 hover:scale-105 flex items-center justify-center">
-                        <i class="bi bi-envelope mr-2"></i>
-                        Get In Touch
-                    </a>
-                </div>
-                
-                <!-- Social Links -->
-                <div class="flex gap-4 mt-8 justify-center md:justify-start">
-                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                        <i class="bi bi-github text-xl"></i>
-                    </a>
-                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                        <i class="bi bi-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                        <i class="bi bi-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                        <i class="bi bi-envelope text-xl"></i>
+                    <a href="/#contact" class="relative border-2 border-primary-500 px-8 py-4 font-bold hover:bg-primary-500/10 transition-all duration-300 overflow-hidden group">
+                        <span class="relative z-10 flex items-center justify-center">
+                            <i class="bi bi-envelope mr-2"></i>
+                            Get In Touch
+                        </span>
+                        <div class="absolute inset-0 bg-primary-500/5 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
                     </a>
                 </div>
             </div>
             
-            <!-- Right Content - Animated Avatar -->
-            <div class="flex-1 flex justify-center" data-aos="fade-left">
+            <!-- Right Content - Profile Image -->
+            <div class="flex-1 flex justify-center" data-aos="fade-left" data-aos-duration="800">
                 <div class="relative">
-                    <!-- Rotating ring -->
-                    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-500 to-purple-500 blur-lg opacity-75 animate-spin-slow"></div>
+                    <!-- Angular frame effects -->
+                    <div class="absolute -inset-4 border-2 border-primary-500 transform rotate-3 opacity-50"></div>
+                    <div class="absolute -inset-6 border-2 border-accent-500 transform -rotate-3 opacity-30"></div>
                     
                     <!-- Avatar container -->
-                    <div class="relative w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20"></div>
+                    <div class="relative w-64 h-64 md:w-96 md:h-96 overflow-hidden shadow-2xl clip-corner">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/30 to-accent-500/30"></div>
                         <img src="https://via.placeholder.com/400" alt="Profile" class="w-full h-full object-cover">
+                        <!-- Accent bars -->
+                        <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary-500 to-accent-500"></div>
+                        <div class="absolute bottom-0 right-0 w-full h-2 bg-gradient-to-r from-primary-500 to-accent-500"></div>
                     </div>
                     
-                    <!-- Floating elements -->
-                    <div class="absolute -top-4 -right-4 bg-gradient-to-r from-primary-500 to-accent-500 p-4 rounded-2xl shadow-xl animate-float">
-                        <i class="bi bi-code-slash text-3xl"></i>
+                    <!-- Floating elements with sharp design -->
+                    <div class="absolute -top-4 -right-4 bg-gradient-to-br from-primary-500 to-primary-600 p-4 border-l-4 border-accent-500 shadow-xl">
+                        <i class="bi bi-pencil-square text-3xl"></i>
                     </div>
-                    <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-accent-500 to-purple-500 p-4 rounded-2xl shadow-xl animate-float" style="animation-delay: 1s;">
-                        <i class="bi bi-lightbulb text-3xl"></i>
+                    <div class="absolute -bottom-4 -left-4 bg-gradient-to-br from-accent-500 to-accent-600 p-4 border-l-4 border-primary-500 shadow-xl">
+                        <i class="bi bi-palette text-3xl"></i>
                     </div>
                 </div>
             </div>
@@ -84,7 +83,7 @@
         
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-            <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
+            <a href="/#about" class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
                 <span class="text-sm mb-2">Scroll Down</span>
                 <i class="bi bi-chevron-down text-2xl"></i>
             </a>

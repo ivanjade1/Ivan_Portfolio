@@ -1,135 +1,141 @@
 # Email Configuration Guide
 
-## Gmail Setup for Contact Form
+## Resend Setup for Contact Form
 
-Your portfolio contact form is now configured to send emails! Follow these steps to complete the setup:
+Your portfolio contact form now uses **Resend** - a modern, developer-friendly email API with better deliverability and no complex SMTP configuration!
 
-### 1. Update Your Email in `.env` file
+### 1. Create a Resend Account
+
+1. Go to **https://resend.com**
+2. Sign up for a free account (100 emails/day free tier)
+3. Verify your email address
+
+### 2. Add and Verify Your Domain (Optional but Recommended)
+
+For production use with your own domain:
+1. Go to: https://resend.com/domains
+2. Click "Add Domain"
+3. Add your domain (e.g., `ivanjadeportfolio.com`)
+4. Add the provided DNS records to your domain
+5. Wait for verification (usually a few minutes)
+
+**For testing:** You can use `onboarding@resend.dev` which doesn't require verification!
+
+### 3. Get Your API Key
+
+1. Go to: **https://resend.com/api-keys**
+2. Click "Create API Key"
+3. Give it a name (e.g., "Portfolio Contact Form")
+4. Select "Sending access"
+5. Copy the API key (`re_...`)
+
+### 4. Update Your `.env` File
 
 Open `.env` and update these fields:
 ```
-MAIL_USERNAME=your-actual-email@gmail.com
-MAIL_PASSWORD=your-app-password
-MAIL_DEFAULT_SENDER=your-actual-email@gmail.com
+RESEND_API_KEY=re_your_actual_api_key_here
+RESEND_FROM_EMAIL=onboarding@resend.dev
+RESEND_TO_EMAIL=prejolesivanjade@gmail.com
 ```
 
-### 2. Gmail App Password Setup
-
-**Important:** Gmail requires an "App Password" for third-party applications.
-
-#### Steps to generate Gmail App Password:
-
-1. **Enable 2-Step Verification** (if not already enabled):
-   - Go to: https://myaccount.google.com/security
-   - Click "2-Step Verification" and follow the setup
-
-2. **Generate App Password**:
-   - Go to: https://myaccount.google.com/apppasswords
-   - Select "Mail" as the app
-   - Select "Windows Computer" or "Other" as the device
-   - Click "Generate"
-   - Copy the 16-character password (without spaces)
-
-3. **Update `.env` file**:
-   ```
-   MAIL_PASSWORD=abcdabcdabcdabcd
-   ```
-   Replace with your actual 16-character app password (no spaces)
-
-### 3. Current Configuration
-
-Based on your `.env.example`, I've set up:
-- **Password**: `litbonajnuuirddh` (removed spaces)
-- **Email**: `your-email@gmail.com` (UPDATE THIS!)
-
-**⚠️ IMPORTANT**: Replace `your-email@gmail.com` with your actual Gmail address!
+**Important:**
+- `RESEND_API_KEY`: Your API key from step 3
+- `RESEND_FROM_EMAIL`: Use `onboarding@resend.dev` for testing, or `hello@yourdomain.com` if you verified a domain
+- `RESEND_TO_EMAIL`: Your email where contact form submissions will be sent
 
 ### 4. Test the Contact Form
+5. Install Dependencies
+
+```powershell
+pip install -r requirements.txt
+```
+
+### 6. Test the Contact Form
 
 1. Start the server:
    ```powershell
    python run.py
    ```
 
-2. Open your browser: http://127.0.0.1:5000
+2. O7. Troubleshooting
 
-3. Scroll to the contact form and submit a test message
-
-4. Check your Gmail inbox for the notification email
-
-### 5. Troubleshooting
-
-#### "Authentication failed" error:
-- Make sure you're using an App Password, not your regular Gmail password
-- Verify 2-Step Verification is enabled
-- Check that the email address matches exactly
-
-#### "Connection refused" error:
-- Check your internet connection
-- Gmail SMTP might be blocked by firewall/antivirus
-- Try port 465 with SSL instead:
-  ```
-  MAIL_PORT=465
-  MAIL_USE_TLS=False
-  MAIL_USE_SSL=True
-  ```
+#### Invalid API Key:
+- Make sure you copied the entire API key (starts with `re_`)
+- No quotes needed in `.env` file
+- API key should be on the same line as `RESEND_API_KEY=`
 
 #### Email not received:
 - Check your spam folder
-- Verify MAIL_USERNAME is set correctly
-- Check server console for error messages
+- Verify `RESEND_TO_EMAIL` is correct
+- Check Resend dashboard for delivery logs: https://resend.com/emails
+- Make sure you're within the free tier limit (100 emails/day)
 
-### 6. Security Notes
+#### Domain verification issues:
+- DNS records can take up to 48 hours to propagate
+- Use `onboarding@resend.dev` for immediate testing
+- Check DNS propagation: https://dnschecker.org
 
-- ✅ `.env` file is already in `.gitignore` (won't be committed to Git)
-- ✅ Never share your App Password publicly
+### 8. Security Notes
+
+- ✅ `.env` file is in `.gitignore` (won't be committed to Git)
+- ✅ Never share your API key publicly
 - ✅ Never commit `.env` file to version control
-- ✅ Use `.env.example` as a template for others
+- ✅ Use `.env.example` as a template
+- ✅ Regenerate API keys if accidentally exposed
 
-### 7. Alternative Email Services
+### 9. Why Resend?
 
-If Gmail doesn't work, you can use:
+**Advantages over Gmail SMTP:**
+- ✅ No app passwords or 2FA required
+- ✅ Better email deliverability
+- ✅ Built-in analytics and logs
+- ✅ Easy to scale (up to 3,000 emails/day on free tier)
+- ✅ Modern REST API
+- ✅ Production-ready out of the box
+- ✅ Custom domain support
 
-**Outlook/Hotmail:**
-```
-MAIL_SERVER=smtp-mail.outlook.com
+### 10. Production TipsR=smtp-mail.outlook.com
 MAIL_PORT=587
 MAIL_USE_TLS=True
-```
+### 10. Production Tips
 
-**Yahoo:**
-```
-MAIL_SERVER=smtp.mail.yahoo.com
-MAIL_PORT=587
-MAIL_USE_TLS=True
-```
-
-**SendGrid (Recommended for production):**
-```
-MAIL_SERVER=smtp.sendgrid.net
-MAIL_PORT=587
-MAIL_USERNAME=apikey
-MAIL_PASSWORD=your-sendgrid-api-key
-```
+1. **Verify your domain** for better deliverability and professional sender address
+2. **Monitor your emails** in the Resend dashboard
+3. **Set up webhooks** to track delivery/bounce events (optional)
+4. **Use environment variables** for all configuration (never hardcode API keys)
+5. **Consider upgrading** if you need more than 100 emails/day
 
 ## How It Works
 
 When someone submits your contact form:
-1. Form data is validated
-2. A beautifully formatted email is created
-3. Email is sent to your Gmail address (MAIL_USERNAME)
-4. You can reply directly to the sender (reply-to header is set)
+1. Form data is validated (frontend + backend)
+2. A beautifully formatted HTML email is created
+3. Email is sent via Resend API to your inbox (`RESEND_TO_EMAIL`)
+4. Reply-to header is set to the sender's email for easy responses
 5. User sees success message on your website
+6. Check delivery status in Resend dashboard
 
-## Email Template
+## Email Template Features
 
 The email includes:
-- ✉️ Sender's name and email
+- ✉️ Sender's name and email (with clickable mailto link)
 - 📝 Subject line
-- 💬 Message content
-- 🎨 Beautiful HTML formatting
+- 💬 Message content with proper formatting
+- 🎨 Beautiful HTML design with your brand colors
 - 🔄 Reply-to header for easy responses
+- 📱 Mobile-responsive layout
+
+## Resend Dashboard
+
+View your email activity at: **https://resend.com/emails**
+- See delivery status
+- View email content
+- Track opens/clicks (if enabled)
+- Debug failures
+- Monitor API usage
 
 ---
+
+**Need help?** Check out Resend docs: https://resend.com/docs
 
 Need help? Check the console output when submitting the form for detailed error messages!

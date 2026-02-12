@@ -30,11 +30,11 @@ function initializeSkillFilters() {
             // Update button styles
             filterButtons.forEach(btn => {
                 if (btn.classList.contains('active')) {
-                    btn.classList.add('bg-gradient-to-r', 'from-primary-500', 'to-accent-500');
-                    btn.classList.remove('bg-slate-800');
+                    btn.classList.add('bg-primary-500', 'border-accent-500');
+                    btn.classList.remove('bg-slate-800', 'border-transparent');
                 } else {
-                    btn.classList.remove('bg-gradient-to-r', 'from-primary-500', 'to-accent-500');
-                    btn.classList.add('bg-slate-800');
+                    btn.classList.remove('bg-primary-500', 'border-accent-500');
+                    btn.classList.add('bg-slate-800', 'border-transparent');
                 }
             });
             
@@ -78,11 +78,11 @@ function initializeProjectFilters() {
             // Update button styles
             filterButtons.forEach(btn => {
                 if (btn.classList.contains('active')) {
-                    btn.classList.add('bg-gradient-to-r', 'from-primary-500', 'to-accent-500');
-                    btn.classList.remove('bg-slate-800');
+                    btn.classList.add('bg-primary-500', 'border-accent-500');
+                    btn.classList.remove('bg-slate-800', 'border-transparent');
                 } else {
-                    btn.classList.remove('bg-gradient-to-r', 'from-primary-500', 'to-accent-500');
-                    btn.classList.add('bg-slate-800');
+                    btn.classList.remove('bg-primary-500', 'border-accent-500');
+                    btn.classList.add('bg-slate-800', 'border-transparent');
                 }
             });
             

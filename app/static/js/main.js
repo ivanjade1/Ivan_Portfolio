@@ -9,6 +9,19 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScrollToTop();
     initializeTypingEffect();
     initializeCounters();
+    
+    // Handle hash in URL on page load (for cross-page navigation)
+    if (window.location.hash) {
+        setTimeout(() => {
+            const targetElement = document.getElementById(window.location.hash.substring(1));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 100);
+    }
 });
 
 /**
@@ -77,6 +90,24 @@ function initializeNavigation() {
                     // Update URL without scrolling
                     history.pushState(null, null, href);
                 }
+            } else if (href.includes('/#')) {
+                // Handle cross-page navigation (e.g., from /privacy to /#about)
+                const hash = href.split('/#')[1];
+                if (window.location.pathname !== '/') {
+                    // If not on home page, navigate to home page with hash
+                    window.location.href = href;
+                } else {
+                    // If on home page, just scroll to section
+                    e.preventDefault();
+                    const targetElement = document.getElementById(hash);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        history.pushState(null, null, '#' + hash);
+                    }
+                }
             }
         });
     });
@@ -142,11 +173,11 @@ function initializeTypingEffect() {
     if (!typedElement) return;
     
     const phrases = [
-        'Full Stack Developer',
-        'UI/UX Enthusiast',
-        'Problem Solver',
-        'Creative Thinker',
-        'Tech Innovator'
+        'UI/UX Designer',
+        'Product Designer',
+        'Visual Designer',
+        'Design System Architect',
+        'User Experience Advocate'
     ];
     
     let phraseIndex = 0;

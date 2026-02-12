@@ -19,21 +19,26 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            200: '#a5f3fc',
+                            300: '#67e8f9',
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490',
+                            800: '#155e75',
+                            900: '#164e63',
                         },
                         accent: {
-                            500: '#ec4899',
-                            600: '#db2777',
-                            700: '#be185d',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
                         }
                     },
                     animation: {
@@ -126,7 +131,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden">
+<body class="bg-slate-950 text-white overflow-x-hidden">
     
     <!-- Animated Background -->
     <div id="particles-background" class="fixed inset-0 z-0"></div>
@@ -143,7 +148,7 @@
     {% include 'components/footer.html' %}
     
     <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-primary-500 to-accent-500 text-white p-4 rounded-full shadow-2xl opacity-0 invisible transition-all duration-300 hover:scale-110 z-50">
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white p-4 shadow-2xl opacity-0 invisible transition-all duration-300 hover:shadow-primary-500/50 hover:-translate-y-1 z-50 border-l-4 border-accent-500">
         <i class="bi bi-arrow-up text-xl"></i>
     </button>
     

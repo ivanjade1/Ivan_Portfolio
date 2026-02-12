@@ -4,11 +4,11 @@ Creates and configures the Flask application instance
 """
 from flask import Flask
 from flask_cors import CORS
-from flask_mail import Mail
+import resend
 import os
 
-# Initialize Flask-Mail
-mail = Mail()
+# Initialize Resend (API key will be set in create_app)
+resend_client = None
 
 
 def create_app(config_name='development'):
@@ -35,17 +35,15 @@ def create_app(config_name='development'):
         TEMPLATES_AUTO_RELOAD=True,
         JSON_SORT_KEYS=False,
         MAX_CONTENT_LENGTH=16 * 1024 * 1024,  # 16MB max file upload,
-        # Flask-Mail configuration
-        MAIL_SERVER=os.environ.get('MAIL_SERVER', 'smtp.gmail.com'),
-        MAIL_PORT=int(os.environ.get('MAIL_PORT', 587)),
-        MAIL_USE_TLS=os.environ.get('MAIL_USE_TLS', 'True').lower() == 'true',
-        MAIL_USERNAME=os.environ.get('MAIL_USERNAME'),
-        MAIL_PASSWORD=os.environ.get('MAIL_PASSWORD'),
-        MAIL_DEFAULT_SENDER=os.environ.get('MAIL_DEFAULT_SENDER', os.environ.get('MAIL_USERNAME'))
+        # Resend configuration
+        RESEND_API_KEY=os.environ.get('RESEND_API_KEY'),
+        RESEND_FROM_EMAIL=os.environ.get('RESEND_FROM_EMAIL', 'onboarding@resend.dev'),
+        RESEND_TO_EMAIL=os.environ.get('RESEND_TO_EMAIL')
     )
     
-    # Initialize Flask-Mail with app
-    mail.init_app(app)
+    # Initialize Resend API key
+    if app.config['RESEND_API_KEY']:
+        resend.api_key = app.config['RESEND_API_KEY']
     
     # Register blueprints
     from app.routes import main_bp, api_bp
