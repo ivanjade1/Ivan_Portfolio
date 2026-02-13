@@ -29,19 +29,19 @@
                 
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
+                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20" data-stagger>
                         <div class="text-3xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent counter" data-target="85">0</div>
                         <div class="text-gray-400 text-sm mt-1 font-semibold">Design Projects</div>
                     </div>
-                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
+                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20" data-stagger>
                         <div class="text-3xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent counter" data-target="5">0</div>
                         <div class="text-gray-400 text-sm mt-1 font-semibold">Years Experience</div>
                     </div>
-                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
+                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20" data-stagger>
                         <div class="text-3xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent counter" data-target="45">0</div>
                         <div class="text-gray-400 text-sm mt-1 font-semibold">Happy Clients</div>
                     </div>
-                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20">
+                    <div class="bg-slate-800 p-6 border-l-4 border-primary-500 hover:border-accent-500 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-500/20" data-stagger>
                         <div class="text-3xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent counter" data-target="12">0</div>
                         <div class="text-gray-400 text-sm mt-1 font-semibold">Design Awards</div>
                     </div>
@@ -62,7 +62,7 @@
                 
                 <!-- Highlights -->
                 <div class="space-y-4 pt-4">
-                    <div class="flex items-start gap-3 group">
+                    <div class="flex items-start gap-3 group" data-stagger>
                         <div class="w-10 h-10 bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0 border-l-4 border-accent-500 group-hover:border-primary-500 transition-all">
                             <i class="bi bi-check2 text-xl font-bold"></i>
                         </div>
@@ -95,9 +95,17 @@
                 
                 <!-- Download CV Button -->
                 <div class="pt-4">
-                    <a href="#" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 font-bold hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 border-l-4 border-accent-500 hover:border-primary-500 group">
-                        <i class="bi bi-download group-hover:animate-bounce"></i>
-                        Download CV
+                    <a href="#" class="group relative inline-flex items-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 px-8 py-4 font-bold hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-500 border-l-4 border-accent-500 magnetic hover:-translate-y-1 overflow-hidden">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <i class="bi bi-download group-hover:animate-sharp-bounce group-hover:rotate-12 transition-transform"></i>
+                            Download CV
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent-500 to-accent-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                        <!-- Corner accents -->
+                        <div class="absolute top-0 right-0 w-2 h-2 bg-primary-400"></div>
+                        <div class="absolute bottom-0 left-0 w-2 h-2 bg-primary-400"></div>
+                        <!-- Animated arrow -->
+                        <i class="bi bi-arrow-right-short relative z-10 text-2xl opacity-0 group-hover:opacity-100 -mr-4 group-hover:mr-0 transition-all duration-300"></i>
                     </a>
                 </div>
             </div>

@@ -1,65 +1,134 @@
 <!-- Footer Component -->
-<footer class="relative bg-slate-900 border-t border-primary-500/20 py-12">
+<footer class="relative bg-slate-900 border-t-2 border-primary-500/30 py-12 overflow-hidden">
+    <!-- Animated background accents -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent opacity-50"></div>
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div class="absolute top-10 right-20 w-32 h-32 bg-primary-500/20 blur-3xl animate-float-geometric"></div>
+        <div class="absolute bottom-10 left-20 w-40 h-40 bg-accent-500/20 blur-3xl animate-float-geometric" style="animation-delay: -5s;"></div>
+    </div>
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <!-- About Column -->
             <div class="md:col-span-2">
-                <h3 class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent mb-4">
+                <h3 class="text-2xl font-bold holographic bg-clip-text text-transparent mb-4 inline-block">
                     Portfolio
                 </h3>
-                <p class="text-gray-400 mb-4 max-w-md">
+                <p class="text-gray-400 mb-4 max-w-md leading-relaxed">
                     Creative UI/UX designer crafting intuitive digital experiences that users love. 
                     Transforming ideas into beautiful, functional designs.
                 </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
-                        <i class="bi bi-github"></i>
+                <div class="flex gap-3">
+                    <a href="#" class="group w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-gradient-to-br hover:from-primary-500 hover:to-accent-500 transition-all duration-500 magnetic card-3d border-2 border-slate-700 hover:border-primary-500 relative overflow-hidden">
+                        <i class="bi bi-github relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all"></div>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
-                        <i class="bi bi-linkedin"></i>
+                    <a href="#" class="group w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-gradient-to-br hover:from-primary-500 hover:to-accent-500 transition-all duration-500 magnetic card-3d border-2 border-slate-700 hover:border-primary-500 relative overflow-hidden">
+                        <i class="bi bi-linkedin relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all"></div>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
-                        <i class="bi bi-twitter"></i>
+                    <a href="#" class="group w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-gradient-to-br hover:from-primary-500 hover:to-accent-500 transition-all duration-500 magnetic card-3d border-2 border-slate-700 hover:border-primary-500 relative overflow-hidden">
+                        <i class="bi bi-twitter relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all"></div>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gradient-to-r hover:from-primary-500 hover:to-accent-500 transition-all duration-300 hover:scale-110">
-                        <i class="bi bi-envelope"></i>
+                    <a href="#" class="group w-10 h-10 bg-slate-800 flex items-center justify-center hover:bg-gradient-to-br hover:from-primary-500 hover:to-accent-500 transition-all duration-500 magnetic card-3d border-2 border-slate-700 hover:border-primary-500 relative overflow-hidden">
+                        <i class="bi bi-envelope relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"></i>
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all"></div>
                     </a>
                 </div>
             </div>
             
             <!-- Quick Links -->
             <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
+                <h4 class="font-bold mb-4 text-lg border-l-4 border-primary-500 pl-3">Quick Links</h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="/#home" class="hover:text-primary-400 transition-colors">Home</a></li>
-                    <li><a href="/#about" class="hover:text-primary-400 transition-colors">About</a></li>
-                    <li><a href="/#skills" class="hover:text-primary-400 transition-colors">Skills</a></li>
-                    <li><a href="/#projects" class="hover:text-primary-400 transition-colors">Projects</a></li>
-                    <li><a href="/#contact" class="hover:text-primary-400 transition-colors">Contact</a></li>
+                    <li class="group">
+                        <a href="/#home" class="inline-flex items-center hover:text-primary-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-primary-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="/#about" class="inline-flex items-center hover:text-primary-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-primary-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            About
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="/#skills" class="inline-flex items-center hover:text-primary-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-primary-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Skills
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="/#projects" class="inline-flex items-center hover:text-primary-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-primary-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Projects
+                        </a>
+                    </li>
+                    <li class="group">
+                        <a href="/#contact" class="inline-flex items-center hover:text-primary-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-primary-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
             
             <!-- Services -->
             <div>
-                <h4 class="font-bold mb-4">Services</h4>
+                <h4 class="font-bold mb-4 text-lg border-l-4 border-accent-500 pl-3">Services</h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li class="hover:text-primary-400 transition-colors cursor-pointer">UI Design</li>
-                    <li class="hover:text-primary-400 transition-colors cursor-pointer">UX Research</li>
-                    <li class="hover:text-primary-400 transition-colors cursor-pointer">Wireframing</li>
-                    <li class="hover:text-primary-400 transition-colors cursor-pointer">Prototyping</li>
-                    <li class="hover:text-primary-400 transition-colors cursor-pointer">Design Systems</li>
+                    <li class="group">
+                        <span class="inline-flex items-center hover:text-accent-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-accent-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            UI Design
+                        </span>
+                    </li>
+                    <li class="group">
+                        <span class="inline-flex items-center hover:text-accent-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-accent-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            UX Research
+                        </span>
+                    </li>
+                    <li class="group">
+                        <span class="inline-flex items-center hover:text-accent-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-accent-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Wireframing
+                        </span>
+                    </li>
+                    <li class="group">
+                        <span class="inline-flex items-center hover:text-accent-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-accent-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Prototyping
+                        </span>
+                    </li>
+                    <li class="group">
+                        <span class="inline-flex items-center hover:text-accent-400 transition-all duration-300 hover:translate-x-2">
+                            <span class="w-0 h-px bg-accent-500 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                            Design Systems
+                        </span>
+                    </li>
                 </ul>
             </div>
         </div>
         
         <!-- Bottom Bar -->
-        <div class="border-t border-primary-500/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="border-t-2 border-primary-500/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 relative">
+            <!-- Animated top border accent -->
+            <div class="absolute top-0 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-accent-500 to-transparent opacity-50"></div>
+            
             <p class="text-gray-400 text-sm">
-                &copy; {{ data.current_year }} <span class="text-primary-400 font-semibold">{{ data.name }}</span>. All rights reserved.
+                &copy; {{ data.current_year }} <span class="holographic bg-clip-text text-transparent font-bold">{{ data.name }}</span>. All rights reserved.
             </p>
             <div class="flex gap-6 text-sm text-gray-400">
-                <a href="/privacy" class="hover:text-primary-400 transition-colors">Privacy Policy</a>
-                <a href="/terms" class="hover:text-primary-400 transition-colors">Terms of Service</a>
+                <a href="/privacy" class="group relative hover:text-primary-400 transition-all duration-300 font-semibold">
+                    Privacy Policy
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="/terms" class="group relative hover:text-primary-400 transition-all duration-300 font-semibold">
+                    Terms of Service
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                </a>
             </div>
         </div>
     </div>

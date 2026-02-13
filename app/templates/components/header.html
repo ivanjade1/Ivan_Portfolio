@@ -3,64 +3,79 @@
     <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <!-- Logo -->
-            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent hover:scale-105 transition-transform border-l-4 border-accent-500 pl-3">
+            <a href="/" class="group relative text-2xl font-bold holographic bg-clip-text text-transparent hover:scale-105 transition-all duration-500 border-l-4 border-accent-500 pl-3 magnetic">
                 <span class="font-playfair">Portfolio</span>
+                <!-- Animated corner accent -->
+                <div class="absolute -bottom-1 -right-1 w-2 h-2 bg-primary-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
             
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="/#home" class="nav-link text-gray-300 hover:text-white transition-colors relative group">
+                <a href="/#home" class="nav-link text-gray-300 hover:text-white transition-all duration-300 relative group font-bold magnetic">
                     Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-1 h-1 bg-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </a>
-                <a href="/#about" class="nav-link text-gray-300 hover:text-white transition-colors relative group">
+                <a href="/#about" class="nav-link text-gray-300 hover:text-white transition-all duration-300 relative group font-bold magnetic">
                     About
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-1 h-1 bg-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </a>
-                <a href="/#skills" class="nav-link text-gray-300 hover:text-white transition-colors relative group">
+                <a href="/#skills" class="nav-link text-gray-300 hover:text-white transition-all duration-300 relative group font-bold magnetic">
                     Skills
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-1 h-1 bg-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </a>
-                <a href="/#projects" class="nav-link text-gray-300 hover:text-white transition-colors relative group">
+                <a href="/#projects" class="nav-link text-gray-300 hover:text-white transition-all duration-300 relative group font-bold magnetic">
                     Projects
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-1 h-1 bg-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </a>
-                <a href="/#experience" class="nav-link text-gray-300 hover:text-white transition-colors relative group">
+                <a href="/#experience" class="nav-link text-gray-300 hover:text-white transition-all duration-300 relative group font-bold magnetic">
                     Experience
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                    <span class="absolute -bottom-1 left-0 w-1 h-1 bg-accent-500 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 </a>
-                <a href="/#contact" class="bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-2 hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 border-l-4 border-accent-500 font-bold">
-                    Contact Me
+                <a href="/#contact" class="group relative bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-2 hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-500 border-l-4 border-accent-500 font-bold magnetic hover:-translate-y-1 overflow-hidden">
+                    <span class="relative z-10">Contact Me</span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-500 to-accent-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                    <!-- Corner accents -->
+                    <div class="absolute top-0 right-0 w-1.5 h-1.5 bg-primary-400"></div>
+                    <div class="absolute bottom-0 left-0 w-1.5 h-1.5 bg-primary-400"></div>
                 </a>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-white text-2xl focus:outline-none">
-                <i class="bi bi-list"></i>
+            <button id="mobileMenuBtn" class="group md:hidden text-white text-2xl focus:outline-none w-10 h-10 flex items-center justify-center border-2 border-primary-500/50 hover:border-accent-500 transition-all duration-300 hover:scale-110 magnetic relative overflow-hidden">
+                <i class="bi bi-list relative z-10 group-hover:rotate-90 transition-transform duration-300"></i>
+                <div class="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/20 group-hover:to-accent-500/20 transition-all"></div>
             </button>
         </div>
     </nav>
     
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-lg">
-        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-            <a href="/#home" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-2">
-                <i class="bi bi-house-door mr-2"></i> Home
+    <div id="mobileMenu" class="md:hidden hidden bg-slate-900/95 backdrop-blur-lg border-t border-primary-500/20">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-3">
+            <a href="/#home" class="mobile-nav-link group text-gray-300 hover:text-white transition-all duration-300 py-3 px-4 border-l-4 border-transparent hover:border-primary-500 hover:bg-slate-800/50 font-bold">
+                <i class="bi bi-house-door mr-2 group-hover:scale-110 inline-block transition-transform"></i> Home
             </a>
-            <a href="/#about" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-2">
-                <i class="bi bi-person mr-2"></i> About
+            <a href="/#about" class="mobile-nav-link group text-gray-300 hover:text-white transition-all duration-300 py-3 px-4 border-l-4 border-transparent hover:border-primary-500 hover:bg-slate-800/50 font-bold">
+                <i class="bi bi-person mr-2 group-hover:scale-110 inline-block transition-transform"></i> About
             </a>
-            <a href="/#skills" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-2">
-                <i class="bi bi-code-slash mr-2"></i> Skills
+            <a href="/#skills" class="mobile-nav-link group text-gray-300 hover:text-white transition-all duration-300 py-3 px-4 border-l-4 border-transparent hover:border-primary-500 hover:bg-slate-800/50 font-bold">
+                <i class="bi bi-code-slash mr-2 group-hover:scale-110 inline-block transition-transform"></i> Skills
             </a>
-            <a href="/#projects" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-2">
-                <i class="bi bi-briefcase mr-2"></i> Projects
+            <a href="/#projects" class="mobile-nav-link group text-gray-300 hover:text-white transition-all duration-300 py-3 px-4 border-l-4 border-transparent hover:border-primary-500 hover:bg-slate-800/50 font-bold">
+                <i class="bi bi-briefcase mr-2 group-hover:scale-110 inline-block transition-transform"></i> Projects
             </a>
-            <a href="/#experience" class="mobile-nav-link text-gray-300 hover:text-white transition-colors py-2">
-                <i class="bi bi-clock-history mr-2"></i> Experience
+            <a href="/#experience" class="mobile-nav-link group text-gray-300 hover:text-white transition-all duration-300 py-3 px-4 border-l-4 border-transparent hover:border-primary-500 hover:bg-slate-800/50 font-bold">
+                <i class="bi bi-clock-history mr-2 group-hover:scale-110 inline-block transition-transform"></i> Experience
             </a>
-            <a href="/#contact" class="mobile-nav-link bg-gradient-to-r from-primary-500 to-accent-500 px-6 py-3 rounded-full text-center">
-                <i class="bi bi-envelope mr-2"></i> Contact Me
+            <a href="/#contact" class="mobile-nav-link group relative bg-gradient-to-r from-primary-500 to-accent-500 px-6 py-3 text-center font-bold border-l-4 border-primary-400 overflow-hidden">
+                <span class="relative z-10">
+                    <i class="bi bi-envelope mr-2 group-hover:rotate-12 inline-block transition-transform"></i> Contact Me
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </a>
         </div>
     </div>

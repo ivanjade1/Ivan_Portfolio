@@ -1,12 +1,18 @@
 <!-- Contact Section Component -->
 <section id="contact" class="py-20 relative overflow-hidden bg-slate-900/50">
-    <div class="container mx-auto px-6">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+        <div class="absolute top-20 left-10 w-64 h-64 bg-primary-500/20 blur-3xl animate-float-geometric"></div>
+        <div class="absolute bottom-20 right-10 w-80 h-80 bg-accent-500/20 blur-3xl animate-float-geometric" style="animation-delay: -7s;"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 relative z-10">
         <!-- Section Header -->
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">
-                Get In <span class="bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">Touch</span>
+                Get In <span class="holographic bg-clip-text text-transparent">Touch</span>
             </h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full"></div>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto"></div>
             <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
                 Have a project in mind or just want to chat? Feel free to reach out!
             </p>
@@ -25,9 +31,10 @@
                 
                 <!-- Contact Methods -->
                 <div class="space-y-4">
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="flex items-center gap-4 group cursor-pointer card-3d bg-slate-800/30 p-4 border-l-4 border-transparent hover:border-primary-500 transition-all duration-500" data-stagger>
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
                             <i class="bi bi-envelope text-2xl"></i>
+                            <div class="absolute inset-0 border-2 border-primary-400/0 group-hover:border-primary-400/50 transition-all"></div>
                         </div>
                         <div>
                             <h4 class="font-semibold mb-1">Email</h4>
@@ -35,9 +42,10 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="flex items-center gap-4 group cursor-pointer card-3d bg-slate-800/30 p-4 border-l-4 border-transparent hover:border-primary-500 transition-all duration-500" data-stagger>
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
                             <i class="bi bi-phone text-2xl"></i>
+                            <div class="absolute inset-0 border-2 border-primary-400/0 group-hover:border-primary-400/50 transition-all"></div>
                         </div>
                         <div>
                             <h4 class="font-semibold mb-1">Phone</h4>
@@ -45,9 +53,10 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-center gap-4 group">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div class="flex items-center gap-4 group cursor-pointer card-3d bg-slate-800/30 p-4 border-l-4 border-transparent hover:border-primary-500 transition-all duration-500" data-stagger>
+                        <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 relative">
                             <i class="bi bi-geo-alt text-2xl"></i>
+                            <div class="absolute inset-0 border-2 border-primary-400/0 group-hover:border-primary-400/50 transition-all"></div>
                         </div>
                         <div>
                             <h4 class="font-semibold mb-1">Location</h4>
@@ -128,10 +137,16 @@
                     
                     <button 
                         type="submit"
-                        class="w-full bg-gradient-to-r from-primary-500 to-accent-500 px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                        class="group relative w-full bg-gradient-to-r from-primary-500 to-accent-500 px-8 py-4 font-bold overflow-hidden hover:shadow-2xl hover:shadow-primary-500/50 transition-all duration-500 flex items-center justify-center gap-2 magnetic hover:-translate-y-1 border-l-4 border-primary-400"
                     >
-                        <i class="bi bi-send"></i>
-                        Send Message
+                        <span class="relative z-10 flex items-center gap-2">
+                            <i class="bi bi-send group-hover:rotate-45 transition-transform duration-300"></i>
+                            Send Message
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                        <!-- Animated corners -->
+                        <div class="absolute top-0 right-0 w-2 h-2 bg-primary-400"></div>
+                        <div class="absolute bottom-0 left-0 w-2 h-2 bg-primary-400"></div>
                     </button>
                     
                     <div id="formMessage" class="hidden p-4 rounded-xl text-center"></div>
