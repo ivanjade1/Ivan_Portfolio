@@ -21,7 +21,7 @@ if __name__ == '__main__':
     print(f"""
     ╔═══════════════════════════════════════════════════════╗
     ║                                                       ║
-    ║         Portfolio Website - Flask Server             ║
+    ║         Portfolio Website - Flask Server              ║
     ║                                                       ║
     ╚═══════════════════════════════════════════════════════╝
     
