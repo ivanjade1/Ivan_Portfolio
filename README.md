@@ -193,9 +193,8 @@ For issues or questions, please open an issue in the repository.
 ## Author
 
 **Your Name**
-- Email: your.email@example.com
-- Website: yourwebsite.com
-- GitHub: @yourusername
+- Email: prejolesivanjade3@gmail.com
+- GitHub: ivanjade1
 
 ---
 
